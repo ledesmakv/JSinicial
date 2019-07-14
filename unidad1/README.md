@@ -8,13 +8,13 @@ Es una estructura de datos que puede cambiar de valor a lo largo de la ejecucio�
 La variable está asociada a algún tipo de dato en base al cuál se determinará la cantidad de bytes a utilizar para almacenar su valor.
 En programación, son las palabras mediante las cuales se hará referencia a una determinada información dentro del programa, ya que en muchas ocaciones no se va a tener el contenido a manipular de antemano, sino que el mismo se generará o se solicitará en un momento determinado.
 De esta forma, las variables permiten a los programadores abstraerse del valor de la información y aún así poder manipularla con total seguridad.
-Algunas consideraciones a tener en cuenta:
-
+Algunas consideraciones a tener en cuenta:<br />
+<br />
 -   La variable se debe declarar (reservar un espacio en la memoria RAM de la CPU). En JavaScript una
-    variable se declara con la palabra reservada var seguida del nombre de la variable.
-    _Ejemplo:_
-    **var** nombreDeLaVariable
-
+    variable se declara con la palabra reservada var seguida del nombre de la variable.<br />
+    _Ejemplo:_<br />
+    **var** nombreDeLaVariable<br />
+<br />
 -   La declaración de una variable solo se debe realizar una vez. Luego de declararla se trabaja con con esa
     variable sin la palabra var.
 

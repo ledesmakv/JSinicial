@@ -35,13 +35,13 @@ Algunas consideraciones a tener en cuenta:<br />
 
 -   El JavaScript el nombre de la variable solo puede estar formado por letras del alfabeto inglés, números, el
     guión bajo (_) o el símbolo pesos (\$). No puede tener espacios en blanco. El primer caracter no puede ser un número.<br /><br />
-    | _Ejemplo:_ | |
-    | --- | --- |
-    | miVariable | (nombre válido) |
-    |_unaVariable1 | (nombre válido)|
-    |otra\$variable | (nombre válido)|
-    |1variable | (nombre inválido)|
-    |la variable | (nombre inválido)|
+     _Ejemplo:_ 
+ <br />
+     miVariable ---------------------------- (nombre válido) 
+    _unaVariable1 -------------------------- (nombre válido)
+    otra\$variable ------------------------- (nombre válido)
+    1variable ------------------------------ (nombre inválido)
+    la variable ---------------------------- (nombre inválido)
 
 -   JavaScript es un lenguaje sensible a caracteres en minúscula y mayúscula (**case sensitive**), por lo que la
     variación influye en los nombres de las variables.<br /><br />
@@ -54,10 +54,10 @@ Algunas consideraciones a tener en cuenta:<br />
     _Las palabras resevadas son:_<br />
     break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, abstract, boolean, byte, char, class, const, debugger, double, enum, export, extends, final, float, goto, implements, import, int, interface, long, native, package, private, protected, public, short, static, super, synchronized, throws, transient, volatile.<br /><br />
     _Ejemplo:_<br />
-    var **var** (nombre de variable inválido)<br />
-    var **do** (nombre de variable inválido)<br />
-    var **var**iable (nombre de variable válido)<br />
-    var **do**nde (nombre de variable válido)<br />
+    var **var** --------------------------- (nombre de variable inválido)<br />
+    var **do** ---------------------------- (nombre de variable inválido)<br />
+    var **var**iable ---------------------- (nombre de variable válido)<br />
+    var **do**nde ------------------------- (nombre de variable válido)<br />
     ⋅⋅* Si bien no es obligatorio, conviene que el nombre de la variable tenga una relación con su contenido. Es decir, si vamos a guardar un nombre, nuestra variable podría llamarse nombre o unNombre, por ejemplo. Esto servirá para cuando se lea el código del programa sea más fácil de entender su funcionamiento.<br />
     ⋅⋅* Finalmente, en programación se puede utilizar una forma de escritura llamada notación camello, llamada así porque parecen las jorobas de un camello. En esta notación los nombres de cada palabra empiezan con mayúscula y el resto se escribe con minúsculas (salvo la primer paralabra). No se usan puntos ni guiones para separar las palabras.<br /><br />
     _Ejemplo:_<br />

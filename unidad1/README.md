@@ -35,13 +35,13 @@ Algunas consideraciones a tener en cuenta:<br />
 
 -   El JavaScript el nombre de la variable solo puede estar formado por letras del alfabeto inglés, números, el
     guión bajo (_) o el símbolo pesos (\$). No puede tener espacios en blanco. El primer caracter no puede ser un número.<br /><br />
-     _Ejemplo:_ 
-        <br />
-         miVariable ---------------------------- (nombre válido) <br />
-        _unaVariable1 -------------------------- (nombre válido)<br />
-        otra\$variable ------------------------- (nombre válido)<br />
-        1variable ------------------------------ (nombre inválido)<br />
-        la variable ---------------------------- (nombre inválido)<br />
+    \_Ejemplo:_
+    <br />
+    miVariable ---------------------------- (nombre válido) <br />
+    \_unaVariable1 -------------------------- (nombre válido)<br />
+    otra\$variable ------------------------- (nombre válido)<br />
+    1variable ------------------------------ (nombre inválido)<br />
+    la variable ---------------------------- (nombre inválido)<br />
 
 -   JavaScript es un lenguaje sensible a caracteres en minúscula y mayúscula (**case sensitive**), por lo que la
     variación influye en los nombres de las variables.<br /><br />
@@ -58,11 +58,11 @@ Algunas consideraciones a tener en cuenta:<br />
     var **do** ---------------------------- (nombre de variable inválido)<br />
     var **var**iable ---------------------- (nombre de variable válido)<br />
     var **do**nde ------------------------- (nombre de variable válido)<br /><br />
-    * Si bien no es obligatorio, conviene que el nombre de la variable tenga una relación con su contenido. Es decir, si vamos a guardar un nombre, nuestra variable podría llamarse nombre o unNombre, por ejemplo. Esto servirá para cuando se lea el código del programa sea más fácil de entender su funcionamiento.<br />
-    * Finalmente, en programación se puede utilizar una forma de escritura llamada notación camello, llamada así porque parecen las jorobas de un camello. En esta notación los nombres de cada palabra empiezan con mayúscula y el resto se escribe con minúsculas (salvo la primer paralabra). No se usan puntos ni guiones para separar las palabras.<br /><br />
-    _Ejemplo:_<br />
-    **mivariable** podría escribirse como **miVariable**<br />
-    **una_variable** podría escribirse como **unaVariable**<br />
+    -   Si bien no es obligatorio, conviene que el nombre de la variable tenga una relación con su contenido. Es decir, si vamos a guardar un nombre, nuestra variable podría llamarse nombre o unNombre, por ejemplo. Esto servirá para cuando se lea el código del programa sea más fácil de entender su funcionamiento.<br />
+    -   Finalmente, en programación se puede utilizar una forma de escritura llamada notación camello, llamada así porque parecen las jorobas de un camello. En esta notación los nombres de cada palabra empiezan con mayúscula y el resto se escribe con minúsculas (salvo la primer paralabra). No se usan puntos ni guiones para separar las palabras.<br /><br />
+        _Ejemplo:_<br />
+        **mivariable** podría escribirse como **miVariable**<br />
+        **una_variable** podría escribirse como **unaVariable**<br />
 
 ### Valor
 
@@ -87,7 +87,7 @@ Conjunto válido de literales, variables y operadores que al evaluarse dan como
 Se dividen en las siguientes categorías:
 
 -   Enteros decimales (base 10): secuencia de dígitos de 0 a 9. No deben comenzar con 0 (cero). Pueden
-    ser positivos o negativos.<br /><br />
+    ser positivos o negativos.<br />
     _Ejemplo:_<br />
     12579<br />
     -135<br />
@@ -97,7 +97,7 @@ Se dividen en las siguientes categorías:
     -2<br />
 
 -   Enteros octales (base 8): secuencia de dígitos de 0 a 7. Para identificarlos se les coloca un 0 (cero) por
-    delante. Pueden ser positivos o negativos. <br /> <br />
+    delante. Pueden ser positivos o negativos. <br />
     _Ejemplo:_<br />
     0777<br />
     -0642<br />
@@ -106,7 +106,7 @@ Se dividen en las siguientes categorías:
     0111<br />
     -0246<br />
 
--   Enteros hexadecimales (base 16): secuencia de dígitos de 0 a 9 y las letras A a F. Para identificarlos se les coloca un 0x (cero x) por delante. Pueden ser positivos o negativos.<br /><br />
+-   Enteros hexadecimales (base 16): secuencia de dígitos de 0 a 9 y las letras A a F. Para identificarlos se les coloca un 0x (cero x) por delante. Pueden ser positivos o negativos.<br />
     _Ejemplo:_<br />
     0xFA59<br />
     -0xA6B8<br />
@@ -115,7 +115,7 @@ Se dividen en las siguientes categorías:
     0xFEDCBA<br />
     -0x123456<br />
 
-*   Punto flotante (decimales): secuencia de dígitos de 0 a 9 con la utilización del . (punto) para separar los enteros de los decimales o la letra e para los exponentes. Pueden ser positivos o negativos.<br /><br />
+*   Punto flotante (decimales): secuencia de dígitos de 0 a 9 con la utilización del . (punto) para separar los enteros de los decimales o la letra e para los exponentes. Pueden ser positivos o negativos.<br />
     _Ejemplo:_<br />
     3.1416<br />
     -1.2345<br />
@@ -149,12 +149,12 @@ Tabla de comparación de las distintas bases de tipos de datos numéricos:
 Además, JavaScript contiene números con valores especiales. Estos son:
 
 -   No es un número (**NaN, Not a Number**): se utiliza al realizar una operación matemática en datos
-    inapropiados, como cadenas o con el valor no definido.<br /><br />
+    inapropiados, como cadenas o con el valor no definido.<br />
     _valor:_<br />
     NaN<br />
 
 -   Infinito (Infinity): se utiliza cuando un número es demasiado grande para representarlo. Pueden ser
-    positivos o negativos.<br /><br />
+    positivos o negativos.<br />
     _valor:_<br />
     Infinity<br />
     -Infinity<br />
@@ -163,7 +163,7 @@ Además, JavaScript contiene números con valores especiales. Estos son:
 
 Un valor de cadena está formado por una cadena de cero o más caracteres (letras, dígitos y signos de puntuación). El tipo de datos string se usa para representar texto. Para identificarlos se los encierra entre pares de comillas simples (') o dobles ("). Pueden incluirse comillas dobles en cadenas delimitadas por comillas simples y viceversa.
 Las cadenas que no contienen ningún carácter ("") se denominan cadenas vacías (de longitud cero).
-Además JavaScript proporciona secuencias de escape que se pueden incluir en cadenas para crear caracteres que no es posible escribir directamente.<br /><br />
+Además JavaScript proporciona secuencias de escape que se pueden incluir en cadenas para crear caracteres que no es posible escribir directamente.<br />
 _Ejemplos:_<br />
 "Hola mundo, esto es una cadena"<br />
 '¡Esto es otra cadena!'<br />
@@ -176,6 +176,103 @@ _Ejemplos:_<br />
 
 ### Lógicos (boolean)
 
-Los tipos de datos booleanos solamente pueden tener dos valores, verdadero o falso.<br /><br />
+Los tipos de datos booleanos solamente pueden tener dos valores, verdadero o falso.<br />
 
 _valores:_<br />
+true <br />
+false <br />
+
+JavaScript usa las siguientes reglas para convertir valores que no son de tipo boolean en valores de tipo boolean:<br />
+
+-   Todos los **objetos** se consideran **true**.
+-   Las **cadenas** se consideran **false** si y solo si están **vacías**.
+-   **undefined** y **null** se consideran **false**.
+-   Los **números** se consideran **false** si y solo si son **cero**.
+
+### Indefinido (undefined)
+
+Se obtiene el valor undefined cuando se usa una propiedad de objeto que no existe o una variable que se ha declarado, pero nunca ha tenido un valor asignado.<br />
+_valor:_<br />
+undefined<br />
+
+### Nulo (null)
+
+Una variable que contiene **null** no contiene ningún número, cadena, valor booleano u objeto. Para borrar el contenido de una variable (sin eliminar la variable), se le asigna el valor null.
+En JavaScript, null no es lo mismo que 0.<br />
+_valor:_<br />
+null<br />
+
+### Objetos (object)
+
+Los objetos de JavaScript son colecciones de propiedades y métodos.
+Un método es una función que es miembro de un objeto.
+Una propiedad es un valor o un conjunto de valores (en forma de matriz u objeto) que es miembro de un objeto.
+
+## Operadores
+
+#### Aritméticos:
+
+Se utilizan para realizar operaciones aritméticas. Devuelve un número.<br />
+Pueden ser:<br />
+
+-   **suma:** el operador es **+**
+    _ejemplos:_
+    var **suma** = 2 **+** 4 ------------------- (el valor obtenido será **6**)<br />
+    var **otraSuma** = 7 **+** 3 --------------- (el valor obtenido será **10**)<br />
+    var **miSuma** = 0 **+** 6 ----------------- (el valor obtenido será **6**)<br />
+    var **miOtraSuma** = 5 **+** 0 ------------- (el valor obtenido será **5**)<br /><br />
+
+-   **resta:** el operador es **-**<br />
+    _ejemplos:_<br />
+    var **resta** = 2 **-** 4 ----------------------- (el valor obtenido será **-2**)<br />
+    var **otraResta** = 7 **-** 3 ------------------- (el valor obtenido será **4**)<br />
+    var **miResta** = 0 **-** 6 --------------------- (el valor obtenido será **-6**)<br />
+    var **miOtraResta** = 5 **-** 0 ----------------- (el valor obtenido será **5**)<br /><br />
+
+-   **multiplicación:** el operador es **\***<br />
+    _ejemplos:_<br />
+    var **multiplicacion** = 2 **\*** 4 ---------------- (el valor obtenido será **8**)<br />
+    var **otraMultiplicacion** = 7 **\*** 3 ------------ (el valor obtenido será **21**)<br />
+    var **miMultiplicacion** = 0 **\*** 6 -------------- (el valor obtenido será **0**)<br />
+    var **miOtraMultiplicacion** = 5 **\*** 0 ---------- (el valor obtenido será **0**)<br /><br />
+
+-   **división:** el operador es **/**<br />
+    _ejemplos:_<br />
+    var **division** = 2 **/** 4 ---------------- (el valor obtenido será **0.5**)<br />
+    var **otraDivision** = 7 **/** 3 ------------ (el valor obtenido será **2.3333**)<br />
+    var **miDivision** = 0 **/** 6 -------------- (el valor obtenido será **0**)<br />
+    var **miOtraDivision** = 5 **/** 0 ---------- (el valor obtenido será **Infinity**)<br /><br />
+
+-   **módulo:** el operador es **%**<br />
+    _ejemplos:_<br />
+    var **modulo** = 2 **%** 4 ---------------- (el valor obtenido será **0**, ya que el resto de 2/4 es 0)<br />
+    var **otroModulo** = 7 **%** 3 ------------ (el valor obtenido será **1**, ya que el resto de 7/3 es 1)<br />
+    var **miModulo** = 0 **%** 6 -------------- (el valor obtenido será **0**)<br />
+    var **miOtroModulo** = 5 **%** 0 ---------- (el valor obtenido será **NaN**)<br /><br />
+
+-   **incremento:** el operador es **++**. Incrementa en una unidad el valor de la variable.<br />
+    _ejemplos:_<br />
+    var **miVariable** = 3
+    **miVariable++** ------------ (el valor de **miVariable** ahora será **4**)<br />
+
+-   **decremento:** el operador es **--**. Decrementa en una unidad el valor de la variable.<br />
+    _ejemplos:_<br />
+    var **miVariable** = 3
+    **miVariable--** ------------ (el valor de **miVariable** ahora será **2**)<br />
+
+### De asignación
+
+Se utilizan para asignar un valor o expresión a una variable. La variable se coloca a la izquierda del operador y el valor o la expresión se coloca a la derecha.
+Pueden ser:
+
+-   **asignación**: el operador es =. Si escribo x = y, asigna a x el contenido de y.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
+    var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
+    **valorUno = valorDos** ---------------------- (**valorUno** ahora pasará a valer **3**)<br /><br />
+
+-   **asignación con suma**: el operador es +=. Si escribo x += y, asigna a x el contenido de x + y.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
+    var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
+    **valorUno = valorDos** ---------------------- (**valorUno** ahora pasará a valer **3**)<br /><br />

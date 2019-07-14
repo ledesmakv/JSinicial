@@ -29,19 +29,19 @@ Algunas consideraciones a tener en cuenta:<br />
     inicial). Esto puede ocurrir a la hora de declararla o durante el desarrollo del programa.<br /><br />
     _Ejemplo:_<br />
     **var** unValor<br />
-    **var** otroValor = 1 (se inicializa la variable al declararla)<br />
-    unValor = 2 (se inicializa la variable luego de declararla)<br />
-    otroValor = 3 (se asigna un nuevo valor a una variable ya inicializada)<br />
+    **var** otroValor = 1 ---------------------------- (se inicializa la variable al declararla)<br />
+    unValor = 2 -------------------------------------- (se inicializa la variable luego de declararla)<br />
+    otroValor = 3 ------------------------------------ (se asigna un nuevo valor a una variable ya inicializada)<br />
 
 -   El JavaScript el nombre de la variable solo puede estar formado por letras del alfabeto inglés, números, el
     guión bajo (_) o el símbolo pesos (\$). No puede tener espacios en blanco. El primer caracter no puede ser un número.<br /><br />
      _Ejemplo:_ 
  <br />
-     miVariable ---------------------------- (nombre válido) 
-    _unaVariable1 -------------------------- (nombre válido)
-    otra\$variable ------------------------- (nombre válido)
-    1variable ------------------------------ (nombre inválido)
-    la variable ---------------------------- (nombre inválido)
+     miVariable ---------------------------- (nombre válido) <br />
+    _unaVariable1 -------------------------- (nombre válido)<br />
+    otra\$variable ------------------------- (nombre válido)<br />
+    1variable ------------------------------ (nombre inválido)<br />
+    la variable ---------------------------- (nombre inválido)<br />
 
 -   JavaScript es un lenguaje sensible a caracteres en minúscula y mayúscula (**case sensitive**), por lo que la
     variación influye en los nombres de las variables.<br /><br />

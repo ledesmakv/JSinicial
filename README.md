@@ -6,7 +6,7 @@ Guía de ejercicios para aprender y practicar JS desde creación de variables ha
 
 Ejercicios de variables y tipos de datos
 
-[ir --> ](../unidad1/)
+[ir --> ](/unidad1/)
 
 ## Unidad 2
 

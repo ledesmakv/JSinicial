@@ -12,25 +12,25 @@ Ejercicios de variables y tipos de datos
 
 Ejercicios de **variables**, **tipos de datos** y utilización de **operadores**.
 
-[ir --> ](unidad2/README)
+[ir --> ](/unidad2/)
 
 ## Unidad 3
 
 Ejercicios de estructuras de control (**if**, **else**, **switch**), y operadores lógicos (**&&**, **||**)
 
-[ir --> ](unidad3/README)
+[ir --> ](/unidad3/)
 
 ## Unidad 4
 
 Segunda parte de estructuras de control o bucles (**while**, **do while**, **for**)
 
-[ir --> ](unidad4/README)
+[ir --> ](/unidad4/)
 
 ## Unidad 5
 
 Ejercicios de manejo de **Arrays**
 
-[ir --> ](unidad5/README)
+[ir --> ](/unidad5/)
 
 _power by_ [**Fértil Studio**](http://fertilstudio.com/)
 

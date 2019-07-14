@@ -35,10 +35,10 @@ Algunas consideraciones a tener en cuenta:<br />
 
 -   El JavaScript el nombre de la variable solo puede estar formado por letras del alfabeto inglés, números, el
     guión bajo (_) o el símbolo pesos (\$). No puede tener espacios en blanco. El primer caracter no puede ser un número.<br /><br />
-    | \_Ejemplo:_ |
-    | --- |
+    | _Ejemplo:_ | |
+    | --- | --- |
     | miVariable | (nombre válido) |
-    |\_unaVariable1 | (nombre válido)|
+    |_unaVariable1 | (nombre válido)|
     |otra\$variable | (nombre válido)|
     |1variable | (nombre inválido)|
     |la variable | (nombre inválido)|

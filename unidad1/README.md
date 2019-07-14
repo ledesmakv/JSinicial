@@ -10,57 +10,58 @@ En programación, son las palabras mediante las cuales se hará referencia a u
 De esta forma, las variables permiten a los programadores abstraerse del valor de la información y aún así poder manipularla con total seguridad.
 Algunas consideraciones a tener en cuenta:<br />
 <br />
+
 -   La variable se debe declarar (reservar un espacio en la memoria RAM de la CPU). En JavaScript una
-    variable se declara con la palabra reservada var seguida del nombre de la variable.<br />
+    variable se declara con la palabra reservada var seguida del nombre de la variable.<br /><br />
     _Ejemplo:_<br />
     **var** nombreDeLaVariable<br />
-<br />
+
 -   La declaración de una variable solo se debe realizar una vez. Luego de declararla se trabaja con con esa
-    variable sin la palabra var.
+    variable sin la palabra var.<br />
 
 -   Para asignar un valor a la variable se utiliza el operador de asignación **=** (igual). La variable debe ir del
-    lado izquierdo del operador y el valor debe ir del lado derecho del operador.
-    _Ejemplo:_
-    **var** unValor
-    unValor = 1
+    lado izquierdo del operador y el valor debe ir del lado derecho del operador.<br /><br />
+    _Ejemplo:_<br />
+    **var** unValor<br />
+    unValor = 1<br />
 
 -   La primera vez que se le asigna un valor a una variable se la está inicializando (se le está danto el valor
-    inicial). Esto puede ocurrir a la hora de declararla o durante el desarrollo del programa.
-    _Ejemplo:_
-    **var** unValor
-    **var** otroValor = 1 (se inicializa la variable al declararla)
-    unValor = 2 (se inicializa la variable luego de declararla)
-    otroValor = 3 (se asigna un nuevo valor a una variable ya inicializada)
+    inicial). Esto puede ocurrir a la hora de declararla o durante el desarrollo del programa.<br /><br />
+    _Ejemplo:_<br />
+    **var** unValor<br />
+    **var** otroValor = 1 (se inicializa la variable al declararla)<br />
+    unValor = 2 (se inicializa la variable luego de declararla)<br />
+    otroValor = 3 (se asigna un nuevo valor a una variable ya inicializada)<br />
 
 -   El JavaScript el nombre de la variable solo puede estar formado por letras del alfabeto inglés, números, el
-    guión bajo (_) o el símbolo pesos (\$). No puede tener espacios en blanco. El primer caracter no puede ser un número.
-    \_Ejemplo:_
-    miVariable (nombre válido)
-    \_unaVariable1 (nombre válido)
-    otra\$variable (nombre válido)
-    1variable (nombre inválido)
-    la variable (nombre inválido)
+    guión bajo (_) o el símbolo pesos (\$). No puede tener espacios en blanco. El primer caracter no puede ser un número.<br /><br />
+    \_Ejemplo:_<br />
+    miVariable | (nombre válido)<br />
+    \_unaVariable1 | (nombre válido)<br />
+    otra\$variable | (nombre válido)<br />
+    1variable | (nombre inválido)<br />
+    la variable | (nombre inválido)<br />
 
 -   JavaScript es un lenguaje sensible a caracteres en minúscula y mayúscula (**case sensitive**), por lo que la
-    variación influye en los nombres de las variables.
-    _Ejemplo:_
-    **miVariable** es distinto a **MiVariable**
-    **OtraVariable** es distinto a **otraVariable**
+    variación influye en los nombres de las variables.<br /><br />
+    _Ejemplo:_<br />
+    **miVariable** es distinto a **MiVariable**<br />
+    **OtraVariable** es distinto a **otraVariable**<br />
 
 -   Existe un conjunto de palabras que no se pueden utilizar como nombre de variables ya que para
-    JavaScript tienen un significado o función establecida. Esta lista de palabras se conoce como **palabras reservadas** y su utilización como nombre de variable pueden generar errores en el código.
-    _Las palabras resevadas son:_
-    break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, abstract, boolean, byte, char, class, const, debugger, double, enum, export, extends, final, float, goto, implements, import, int, interface, long, native, package, private, protected, public, short, static, super, synchronized, throws, transient, volatile.
-    _Ejemplo:_
-    var **var** (nombre de variable inválido)
-    var **do** (nombre de variable inválido)
-    var **var**iable (nombre de variable válido)
-    var **do**nde (nombre de variable válido)
-    ⋅⋅* Si bien no es obligatorio, conviene que el nombre de la variable tenga una relación con su contenido. Es decir, si vamos a guardar un nombre, nuestra variable podría llamarse nombre o unNombre, por ejemplo. Esto servirá para cuando se lea el código del programa sea más fácil de entender su funcionamiento.
-    ⋅⋅* Finalmente, en programación se puede utilizar una forma de escritura llamada notación camello, llamada así porque parecen las jorobas de un camello. En esta notación los nombres de cada palabra empiezan con mayúscula y el resto se escribe con minúsculas (salvo la primer paralabra). No se usan puntos ni guiones para separar las palabras.
-    _Ejemplo:_
-    **mivariable** podría escribirse como **miVariable**
-    **una_variable** podría escribirse como **unaVariable**
+    JavaScript tienen un significado o función establecida. Esta lista de palabras se conoce como **palabras reservadas** y su utilización como nombre de variable pueden generar errores en el código.<br />
+    _Las palabras resevadas son:_<br />
+    break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, abstract, boolean, byte, char, class, const, debugger, double, enum, export, extends, final, float, goto, implements, import, int, interface, long, native, package, private, protected, public, short, static, super, synchronized, throws, transient, volatile.<br /><br />
+    _Ejemplo:_<br />
+    var **var** (nombre de variable inválido)<br />
+    var **do** (nombre de variable inválido)<br />
+    var **var**iable (nombre de variable válido)<br />
+    var **do**nde (nombre de variable válido)<br />
+    ⋅⋅* Si bien no es obligatorio, conviene que el nombre de la variable tenga una relación con su contenido. Es decir, si vamos a guardar un nombre, nuestra variable podría llamarse nombre o unNombre, por ejemplo. Esto servirá para cuando se lea el código del programa sea más fácil de entender su funcionamiento.<br />
+    ⋅⋅* Finalmente, en programación se puede utilizar una forma de escritura llamada notación camello, llamada así porque parecen las jorobas de un camello. En esta notación los nombres de cada palabra empiezan con mayúscula y el resto se escribe con minúsculas (salvo la primer paralabra). No se usan puntos ni guiones para separar las palabras.<br /><br />
+    _Ejemplo:_<br />
+    **mivariable** podría escribirse como **miVariable**<br />
+    **una_variable** podría escribirse como **unaVariable**<br />
 
 ### Valor
 
@@ -85,42 +86,42 @@ Conjunto válido de literales, variables y operadores que al evaluarse dan como
 Se dividen en las siguientes categorías:
 
 -   Enteros decimales (base 10): secuencia de dígitos de 0 a 9. No deben comenzar con 0 (cero). Pueden
-    ser positivos o negativos.
-    _Ejemplo:_
-    12579
-    -135
-    105
-    -9876
-    14
-    -2
+    ser positivos o negativos.<br /><br />
+    _Ejemplo:_<br />
+    12579<br />
+    -135<br />
+    105<br />
+    -9876<br />
+    14<br />
+    -2<br />
 
 -   Enteros octales (base 8): secuencia de dígitos de 0 a 7. Para identificarlos se les coloca un 0 (cero) por
-    delante. Pueden ser positivos o negativos.  
-     _Ejemplo:_
-    0777
-    -0642
-    0105
-    -0531
-    0111
-    -0246
+    delante. Pueden ser positivos o negativos. <br /> <br />
+    _Ejemplo:_<br />
+    0777<br />
+    -0642<br />
+    0105<br />
+    -0531<br />
+    0111<br />
+    -0246<br />
 
--   Enteros hexadecimales (base 16): secuencia de dígitos de 0 a 9 y las letras A a F. Para identificarlos se les coloca un 0x (cero x) por delante. Pueden ser positivos o negativos.
-    _Ejemplo:_
-    0xFA59
-    -0xA6B8
-    0x105
-    -0xCE64D2
-    0xFEDCBA
-    -0x123456
+-   Enteros hexadecimales (base 16): secuencia de dígitos de 0 a 9 y las letras A a F. Para identificarlos se les coloca un 0x (cero x) por delante. Pueden ser positivos o negativos.<br /><br />
+    _Ejemplo:_<br />
+    0xFA59<br />
+    -0xA6B8<br />
+    0x105<br />
+    -0xCE64D2<br />
+    0xFEDCBA<br />
+    -0x123456<br />
 
-*   Punto flotante (decimales): secuencia de dígitos de 0 a 9 con la utilización del . (punto) para separar los enteros de los decimales o la letra e para los exponentes. Pueden ser positivos o negativos.
-    _Ejemplo:_
-    3.1416
-    -1.2345
-    3e6
-    -4e2
-    105e-20
-    -16e-14
+*   Punto flotante (decimales): secuencia de dígitos de 0 a 9 con la utilización del . (punto) para separar los enteros de los decimales o la letra e para los exponentes. Pueden ser positivos o negativos.<br /><br />
+    _Ejemplo:_<br />
+    3.1416<br />
+    -1.2345<br />
+    3e6<br />
+    -4e2<br />
+    105e-20<br />
+    -16e-14<br />
 
 Tabla de comparación de las distintas bases de tipos de datos numéricos:
 
@@ -147,34 +148,33 @@ Tabla de comparación de las distintas bases de tipos de datos numéricos:
 Además, JavaScript contiene números con valores especiales. Estos son:
 
 -   No es un número (**NaN, Not a Number**): se utiliza al realizar una operación matemática en datos
-    inapropiados, como cadenas o con el valor no definido.
-    _valor:_
-    NaN
+    inapropiados, como cadenas o con el valor no definido.<br /><br />
+    _valor:_<br />
+    NaN<br />
 
 -   Infinito (Infinity): se utiliza cuando un número es demasiado grande para representarlo. Pueden ser
-    positivos o negativos.
-    _valor:_
-    Infinity
-    -Infinity
+    positivos o negativos.<br /><br />
+    _valor:_<br />
+    Infinity<br />
+    -Infinity<br />
 
 ### Cadenas (string)
 
 Un valor de cadena está formado por una cadena de cero o más caracteres (letras, dígitos y signos de puntuación). El tipo de datos string se usa para representar texto. Para identificarlos se los encierra entre pares de comillas simples (') o dobles ("). Pueden incluirse comillas dobles en cadenas delimitadas por comillas simples y viceversa.
 Las cadenas que no contienen ningún carácter ("") se denominan cadenas vacías (de longitud cero).
-Además JavaScript proporciona secuencias de escape que se pueden incluir en cadenas para crear caracteres que no es posible escribir directamente.
-
-    _Ejemplos:_
-    "Hola mundo, esto es una cadena"
-    '¡Esto es otra cadena!'
-    "Esto es una 'cadena'"
-    '¿Esto es otra "cadena"?'
-    "753"
-    '-468'
-    "d"
-    'n'
+Además JavaScript proporciona secuencias de escape que se pueden incluir en cadenas para crear caracteres que no es posible escribir directamente.<br /><br />
+_Ejemplos:_<br />
+"Hola mundo, esto es una cadena"<br />
+'¡Esto es otra cadena!'<br />
+"Esto es una 'cadena'"<br />
+'¿Esto es otra "cadena"?'<br />
+"753"<br />
+'-468'<br />
+"d"<br />
+'n'<br />
 
 ### Lógicos (boolean)
 
-Los tipos de datos booleanos solamente pueden tener dos valores, verdadero o falso.
+Los tipos de datos booleanos solamente pueden tener dos valores, verdadero o falso.<br /><br />
 
-_valores:_
+_valores:_<br />

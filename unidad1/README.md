@@ -283,11 +283,11 @@ Pueden ser:<br />
     var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
     **valorUno -= valorDos** ---------------------- (**valorUno** ahora pasará a valer **3**)<br /><br />
 
--   **asignación con multiplicación**: el operador es _=. Si escribo x _= y, asigna a x el contenido de x _ y.<br />
-    *ejemplos*:<br />
+-   **asignación con multiplicación**: el operador es \*=. Si escribo x \*= y, asigna a x el contenido de x \* y.<br />
+    _ejemplos_:<br />
     var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
     var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
-    \*\*valorUno _= valorDos** ---------------------- (**valorUno** ahora pasará a valer **18\*\*)<br /><br />
+    **valorUno \*= valorDos** ---------------------- (**valorUno** ahora pasará a valer **18**)<br /><br />
 
 -   **asignación con división**: el operador es /=. Si escribo x /= y, asigna a x el contenido de x / y.<br />
     _ejemplos_:<br />

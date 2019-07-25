@@ -314,20 +314,20 @@ Se utilizan para unir valores del tipo cadena. Existe un solo operador de cadena
     Debe tenerse en cuenta que se utiliza el mismo operador para concatenar como para realizar sumas aritméticas,
     por lo que según el contexto el operador funcionará de diferentes maneras:<br />
 
-····- Si se utiliza solamente entre números, funcionará como operador de suma aritmética.<br />
-·······Ejemplos: <br />
-·······var **respuesta = 1 + 3 + 5 + 6 + 8** ---------------------- (**respuesta** valdrá **23**)<br />
+    -   Si se utiliza solamente entre números, funcionará como operador de suma aritmética.<br />
+        Ejemplos: <br />
+        var **respuesta = 1 + 3 + 5 + 6 + 8** ---------------------- (**respuesta** valdrá **23**)<br />
 
-····- Si se utiliza solamente entre cadenas, funcionará como operador de concatenación.<br />
-·······Ejemplos: <br />
-·······var **respuesta = "1" + "3" + "5" + "6" + "8"** ---------------------- (**respuesta** valdrá **"13568"**)<br />
+    -   Si se utiliza solamente entre cadenas, funcionará como operador de concatenación.<br />
+        Ejemplos: <br />
+        var **respuesta = "1" + "3" + "5" + "6" + "8"** ---------------------- (**respuesta** valdrá **"13568"**)<br />
 
-····- Si se utiliza entre números y cadenas, funcionará como operador de suma y de concatenación.<br />
-·······Ejemplos: <br />
-·······var **respuesta = 1 + 3 + "5" + 6 + 8** ---------------------- (**respuesta** valdrá **"4568"**)<br />
-·······var **otraRespuesta = 1 + "3" + 5 + "6" + 8** ---------------------- (**respuesta** valdrá **"13568"**)<br />
-·······**otraRespuesta = "1" + 3 + 5 + 6 + 8** ---------------------- (**respuesta** valdrá **"13568"**)<br />
-·······**otraRespuesta = 1 + 3 + 5 + 6 + "8"** ---------------------- (**respuesta** valdrá **"158"**)<br />
+    -   Si se utiliza entre números y cadenas, funcionará como operador de suma y de concatenación.<br />
+        Ejemplos: <br />
+        var **respuesta = 1 + 3 + "5" + 6 + 8** ---------------------- (**respuesta** valdrá **"4568"**)<br />
+        var **otraRespuesta = 1 + "3" + 5 + "6" + 8** ---------------------- (**respuesta** valdrá **"13568"**)<br />
+        **otraRespuesta = "1" + 3 + 5 + 6 + 8** ---------------------- (**respuesta** valdrá **"13568"**)<br />
+        **otraRespuesta = 1 + 3 + 5 + 6 + "8"** ---------------------- (**respuesta** valdrá **"158"**)<br />
 
 ### Lógicos
 

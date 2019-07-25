@@ -147,9 +147,10 @@ Las etiquetas `<noscript></noscript>` pueden incluir cualquier etiqueta HTML.<br
 Si al abrir el archivo_4.html el navegador que lo interpreta no tiene JavaScript habilitado, se verá en pantalla el contenido del encabezado 1 y de los párrafos dentro de las etiquetas `<noscript></noscript>`, pero no se ejecutará el código.<br />
 Si al contrario, tiene habilitado JavaScript, el código se ejecutará durante la carga del cuerpo, luego de mostrar el contenido del encabezado 1. Cuando se ejecute, se declarará e inicializará la variable laVariable y no se mostrará el contenido de las etiquetas `<noscript></noscript>`.<br />
 
-##Ingreso y egreso de información
+## Ingreso y egreso de información
 
-###Método prompt:
+### Método prompt:
+
 Este método o función del navegador cuando se ejecuta muestra una ventana emergente con botones “Aceptar” y “Cancelar”, un texto que se puede definir y un campo de entrada de texto con un valor predeterminado que también se puede definir.
 En caso de pulsar el botón “Aceptar”, se obtiene el valor ingresado en el campo de texto.
 En caso de pulsar el botón “Cancelar” o se cierra la ventana emergente, se obtiene el valor null.
@@ -159,7 +160,7 @@ Este método se utilizará para solicitar datos al usuario durante la ejecucio
 var valor = prompt('Ingrese un valor', 'valor por defecto');
 ```
 
-![alt text](images/promp.png 'prompt')
+![alt text](images/prompt.png 'prompt')
 
 En el ejemplo anterior se puede observar que la estructura de este método consta de la palabra prompt seguido de unos paréntesis que encierran dos valores separados con coma (,). El primer valor es el texto que aparece sobre el campo de entrada y el sgundo valor es el valor por defecto que aparece dentro de este campo.<br />
 También se puede observar que una vez que se pulsa alguno de los tres botones ("Aceptar", "Cancelar" o "Cerrar"), el valor obtenido se guardará, en este ejemplo, en la variable valor.

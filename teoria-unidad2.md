@@ -1,290 +1,276 @@
 # Unidad 2
 
-## Declaración de variables y operador de asignación
+## JavaScript
 
-### Variables
+### Sintaxis
 
-Es una estructura de datos que puede cambiar de valor a lo largo de la ejecución de un programa. Corresponde a un área reservada de la memoria principal de la CPU.
-La variable está asociada a algún tipo de dato en base al cuál se determinará la cantidad de bytes a utilizar para almacenar su valor.
-En programación, son las palabras mediante las cuales se hará referencia a una determinada información dentro del programa, ya que en muchas ocaciones no se va a tener el contenido a manipular de antemano, sino que el mismo se generará o se solicitará en un momento determinado.
-De esta forma, las variables permiten a los programadores abstraerse del valor de la información y aún así poder manipularla con total seguridad.
-Algunas consideraciones a tener en cuenta:<br />
+La sintaxis de un lenguaje de programación se define como el conjunto de reglas que deben seguirse al escribir el código fuente de los programas para considerarse como correctos para dicho lenguaje de programación.
+La sintaxis de JavaScript es muy similar a la de otros lenguajes de programación como Java y C. Las normas básicas que definen la sintaxis de JavaScript son las siguientes:<br />
 <br />
 
--   La variable se debe declarar (reservar un espacio en la memoria RAM de la CPU). En JavaScript una
-    variable se declara con la palabra reservada var seguida del nombre de la variable.<br /><br />
-    _Ejemplo:_<br />
-    **var** nombreDeLaVariable<br />
+-   _No se tienen en cuenta los espacios en blanco y las nuevas líneas:_<br />
+    el intérprete de JavaScript ignora cualquier espacio en blanco sobrante, por lo que el código se puede ordenar de forma adecuada para entenderlo mejor (tabulando las líneas, añadiendo espacios, creando nuevas líneas, etc.)<br />
 
--   La declaración de una variable solo se debe realizar una vez. Luego de declararla se trabaja con con esa
-    variable sin la palabra var.<br />
+-   _Se distinguen las mayúsculas y minúsculas:_<br />
+    se dice que JavaScript es case sensitive, esto quiere decir que una palabra escrita en minúsculas es distinta a la misma palabra con una o todas sus letras en mayúsculas, por lo que la variación influye.<br />
 
--   Para asignar un valor a la variable se utiliza el operador de asignación **=** (igual). La variable debe ir del
-    lado izquierdo del operador y el valor debe ir del lado derecho del operador.<br /><br />
-    _Ejemplo:_<br />
-    **var** unValor<br />
-    unValor = 1<br />
+-   _No se define el tipo de dato de las variables:_<br />
+    al crear una variable, no es necesario indicar el tipo de dato que almacenará. De esta forma, una misma variable puede almacenar diferentes tipos de datos durante la ejecución del script.<br />
 
--   La primera vez que se le asigna un valor a una variable se la está inicializando (se le está danto el valor
-    inicial). Esto puede ocurrir a la hora de declararla o durante el desarrollo del programa.<br /><br />
-    _Ejemplo:_<br />
-    **var** unValor<br />
-    **var** otroValor = 1 ---------------------------- (se inicializa la variable al declararla)<br />
-    unValor = 2 -------------------------------------- (se inicializa la variable luego de declararla)<br />
-    otroValor = 3 ------------------------------------ (se asigna un nuevo valor a una variable ya inicializada)<br />
+-   _Cada sentencia debería terminar con punto y coma (;):_<br />
+    en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con punto y coma (;). Aunque JavaScript no obliga a hacerlo, es conveniente seguir la tradición de terminar cada sentencia con punto y coma (;).<br />
 
--   El JavaScript el nombre de la variable solo puede estar formado por letras del alfabeto inglés, números, el
-    guión bajo (_) o el símbolo pesos (\$). No puede tener espacios en blanco. El primer caracter no puede ser un número.<br /><br />
-    \_Ejemplo:_
-    <br />
-    miVariable ---------------------------- (nombre válido) <br />
-    \_unaVariable1 -------------------------- (nombre válido)<br />
-    otra\$variable ------------------------- (nombre válido)<br />
-    1variable ------------------------------ (nombre inválido)<br />
-    la variable ---------------------------- (nombre inválido)<br />
+-   _Se pueden incluir comentarios:_<br />
+    los comentarios se utilizan para añadir información en el código fuente del programa. Aunque el contenido de los comentarios no se visualiza por pantalla, sí se envía al navegador del usuario junto con el resto del script, por lo que es necesario extremar las precauciones sobre la información incluida en los comentarios.<br />
+    JavaScript tiene dos formas de escribir comentarios, los de una sola línea y los que ocupan varias líneas.<br />
+    _Una sola línea de comentario:_ se definen añadiendo dos barras oblicuas (//) al principio de la línea.<br />
+    Ejemplo:<br />
+    // a continuación se declarará una variable, pero esta línea es un comentario var nombreVariable;<br />
+    _Varias líneas de comentario:_ se definen encerrando el texto del comentario entre los símbolos /\* y \*/.<br />
+    Ejemplo:<br />
+    /\* Los comentarios de varias líneas son muy útiles cuando se necesita incluir bastante <br />información en los comentarios.<br />
+    A continuación declaro una nueva variable \*/<br />
+    var nuevaVariable;<br />
 
--   JavaScript es un lenguaje sensible a caracteres en minúscula y mayúscula (**case sensitive**), por lo que la
-    variación influye en los nombres de las variables.<br /><br />
-    _Ejemplo:_<br />
-    **miVariable** es distinto a **MiVariable**<br />
-    **OtraVariable** es distinto a **otraVariable**<br />
+### Etiqueta script
 
--   Existe un conjunto de palabras que no se pueden utilizar como nombre de variables ya que para
-    JavaScript tienen un significado o función establecida. Esta lista de palabras se conoce como **palabras reservadas** y su utilización como nombre de variable pueden generar errores en el código.<br />
-    _Las palabras resevadas son:_<br />
-    break, case, catch, continue, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, abstract, boolean, byte, char, class, const, debugger, double, enum, export, extends, final, float, goto, implements, import, int, interface, long, native, package, private, protected, public, short, static, super, synchronized, throws, transient, volatile.<br /><br />
-    _Ejemplo:_<br />
-    var **var** --------------------------- (nombre de variable inválido)<br />
-    var **do** ---------------------------- (nombre de variable inválido)<br />
-    var **var**iable ---------------------- (nombre de variable válido)<br />
-    var **do**nde ------------------------- (nombre de variable válido)<br /><br />
-    -   Si bien no es obligatorio, conviene que el nombre de la variable tenga una relación con su contenido. Es decir, si vamos a guardar un nombre, nuestra variable podría llamarse nombre o unNombre, por ejemplo. Esto servirá para cuando se lea el código del programa sea más fácil de entender su funcionamiento.<br />
-    -   Finalmente, en programación se puede utilizar una forma de escritura llamada notación camello, llamada así porque parecen las jorobas de un camello. En esta notación los nombres de cada palabra empiezan con mayúscula y el resto se escribe con minúsculas (salvo la primer paralabra). No se usan puntos ni guiones para separar las palabras.<br /><br />
-        _Ejemplo:_<br />
-        **mivariable** podría escribirse como **miVariable**<br />
-        **una_variable** podría escribirse como **unaVariable**<br />
+Para que el navegador interprete el código JavaScript utilizaremos las etiquetas HTML
+`<script></script>`, que se pueden incluir tanto en la cabecera del documento (entre etiquetas
+`<head></head>`), como en en el cuerpo del mismo (entre etiquetas
+`<body></body>`).
+En caso de querer incluir código JavaScript dentro de un documento XHTML y que resulte válido, se debe asignar el atributo type a la etiqueta de apertura `<script>`.
+Los valores que se le pueden asignar al atributo type están estandarizados y para el caso de JavaScript el valor correcto es text/javascript.
+También se puede colocar el código JavaScript en un documento de extensión .js e incluirlo en el documento HTML.<br />
 
-### Valor
-
-Contenido de una variable sobre la que se efectuarán operaciones en un algoritmo.
-
-### Tipo de dato
-
-Es una restricción impuesta por el lenguaje de programación para la interpretación, manipulación y representación de datos. Indica los valores que puede tomar una variable y las operaciones que se pueden realizar con ella en un algoritmo.
-En JavaScript existen los tipos de datos numéricos, de cadena, lógicos, indefinidos, nulos y objetos.
-
-### Literal
-
-Permite declarar valores constantes, que no pueden modificarse en el transcurso del programa.
-
-### Expresión
-
-Conjunto válido de literales, variables y operadores que al evaluarse dan como resultado un único valor del tipo numérico, de cadena o lógico.
-
-## Tipos de datos
-
-**Numéricos (number)**
-Se dividen en las siguientes categorías:
-
--   Enteros decimales (base 10): secuencia de dígitos de 0 a 9. No deben comenzar con 0 (cero). Pueden
-    ser positivos o negativos.<br />
-    _Ejemplo:_<br />
-    12579<br />
-    -135<br />
-    105<br />
-    -9876<br />
-    14<br />
-    -2<br />
-
--   Enteros octales (base 8): secuencia de dígitos de 0 a 7. Para identificarlos se les coloca un 0 (cero) por
-    delante. Pueden ser positivos o negativos. <br />
-    _Ejemplo:_<br />
-    0777<br />
-    -0642<br />
-    0105<br />
-    -0531<br />
-    0111<br />
-    -0246<br />
-
--   Enteros hexadecimales (base 16): secuencia de dígitos de 0 a 9 y las letras A a F. Para identificarlos se les coloca un 0x (cero x) por delante. Pueden ser positivos o negativos.<br />
-    _Ejemplo:_<br />
-    0xFA59<br />
-    -0xA6B8<br />
-    0x105<br />
-    -0xCE64D2<br />
-    0xFEDCBA<br />
-    -0x123456<br />
-
-*   Punto flotante (decimales): secuencia de dígitos de 0 a 9 con la utilización del . (punto) para separar los enteros de los decimales o la letra e para los exponentes. Pueden ser positivos o negativos.<br />
-    _Ejemplo:_<br />
-    3.1416<br />
-    -1.2345<br />
-    3e6<br />
-    -4e2<br />
-    105e-20<br />
-    -16e-14<br />
-
-Tabla de comparación de las distintas bases de tipos de datos numéricos:
-
-| Decimal (base 10) | Octal (base 8) | Hexadecimal (base 16) | Binario (base 2) |
-| ----------------- | -------------- | --------------------- | ---------------- |
-| 0                 | 0              | 0                     | 0                |
-| 1                 | 01             | 0x1                   | 1                |
-| 2                 | 02             | 0x2                   | 10               |
-| 3                 | 03             | 0x3                   | 11               |
-| 4                 | 04             | 0x4                   | 100              |
-| 5                 | 05             | 0x5                   | 101              |
-| 6                 | 06             | 0x6                   | 110              |
-| 7                 | 07             | 0x7                   | 111              |
-| 8                 | 010            | 0x8                   | 1000             |
-| 9                 | 011            | 0x9                   | 1001             |
-| 10                | 012            | 0xA                   | 1010             |
-| 11                | 013            | 0xB                   | 1011             |
-| 12                | 014            | 0xC                   | 1100             |
-| 13                | 015            | 0xD                   | 1101             |
-| 14                | 016            | 0xE                   | 1110             |
-| 15                | 017            | 0xF                   | 1111             |
-| 16                | 020            | 0x10                  | 10000            |
-
-Además, JavaScript contiene números con valores especiales. Estos son:
-
--   No es un número (**NaN, Not a Number**): se utiliza al realizar una operación matemática en datos
-    inapropiados, como cadenas o con el valor no definido.<br />
-    _valor:_<br />
-    NaN<br />
-
--   Infinito (Infinity): se utiliza cuando un número es demasiado grande para representarlo. Pueden ser
-    positivos o negativos.<br />
-    _valor:_<br />
-    Infinity<br />
-    -Infinity<br />
-
-### Cadenas (string)
-
-Un valor de cadena está formado por una cadena de cero o más caracteres (letras, dígitos y signos de puntuación). El tipo de datos string se usa para representar texto. Para identificarlos se los encierra entre pares de comillas simples (') o dobles ("). Pueden incluirse comillas dobles en cadenas delimitadas por comillas simples y viceversa.
-Las cadenas que no contienen ningún carácter ("") se denominan cadenas vacías (de longitud cero).
-Además JavaScript proporciona secuencias de escape que se pueden incluir en cadenas para crear caracteres que no es posible escribir directamente.<br />
-_Ejemplos:_<br />
-"Hola mundo, esto es una cadena"<br />
-'¡Esto es otra cadena!'<br />
-"Esto es una 'cadena'"<br />
-'¿Esto es otra "cadena"?'<br />
-"753"<br />
-'-468'<br />
-"d"<br />
-'n'<br />
-
-### Lógicos (boolean)
-
-Los tipos de datos booleanos solamente pueden tener dos valores, verdadero o falso.<br />
-
-_valores:_<br />
-true <br />
-false <br />
-
-JavaScript usa las siguientes reglas para convertir valores que no son de tipo boolean en valores de tipo boolean:<br />
-
--   Todos los **objetos** se consideran **true**.
--   Las **cadenas** se consideran **false** si y solo si están **vacías**.
--   **undefined** y **null** se consideran **false**.
--   Los **números** se consideran **false** si y solo si son **cero**.
-
-### Indefinido (undefined)
-
-Se obtiene el valor undefined cuando se usa una propiedad de objeto que no existe o una variable que se ha declarado, pero nunca ha tenido un valor asignado.<br />
-_valor:_<br />
-undefined<br />
-
-### Nulo (null)
-
-Una variable que contiene **null** no contiene ningún número, cadena, valor booleano u objeto. Para borrar el contenido de una variable (sin eliminar la variable), se le asigna el valor null.
-En JavaScript, null no es lo mismo que 0.<br />
-_valor:_<br />
-null<br />
-
-### Objetos (object)
-
-Los objetos de JavaScript son colecciones de propiedades y métodos.
-Un método es una función que es miembro de un objeto.
-Una propiedad es un valor o un conjunto de valores (en forma de matriz u objeto) que es miembro de un objeto.
-
-## Operadores
-
-#### Aritméticos:
-
-Se utilizan para realizar operaciones aritméticas. Devuelve un número.<br />
-Pueden ser:<br />
-
--   **suma:** el operador es **+**<br />
-    _ejemplos:_<br />
-    var **suma** = 2 **+** 4 ------------------- (el valor obtenido será **6**)<br />
-    var **otraSuma** = 7 **+** 3 --------------- (el valor obtenido será **10**)<br />
-    var **miSuma** = 0 **+** 6 ----------------- (el valor obtenido será **6**)<br />
-    var **miOtraSuma** = 5 **+** 0 ------------- (el valor obtenido será **5**)<br /><br />
-
--   **resta:** el operador es **-**<br />
-    _ejemplos:_<br />
-    var **resta** = 2 **-** 4 ----------------------- (el valor obtenido será **-2**)<br />
-    var **otraResta** = 7 **-** 3 ------------------- (el valor obtenido será **4**)<br />
-    var **miResta** = 0 **-** 6 --------------------- (el valor obtenido será **-6**)<br />
-    var **miOtraResta** = 5 **-** 0 ----------------- (el valor obtenido será **5**)<br /><br />
-
--   **multiplicación:** el operador es **\***<br />
-    _ejemplos:_<br />
-    var **multiplicacion** = 2 **\*** 4 ---------------- (el valor obtenido será **8**)<br />
-    var **otraMultiplicacion** = 7 **\*** 3 ------------ (el valor obtenido será **21**)<br />
-    var **miMultiplicacion** = 0 **\*** 6 -------------- (el valor obtenido será **0**)<br />
-    var **miOtraMultiplicacion** = 5 **\*** 0 ---------- (el valor obtenido será **0**)<br /><br />
-
--   **división:** el operador es **/**<br />
-    _ejemplos:_<br />
-    var **division** = 2 **/** 4 ---------------- (el valor obtenido será **0.5**)<br />
-    var **otraDivision** = 7 **/** 3 ------------ (el valor obtenido será **2.3333**)<br />
-    var **miDivision** = 0 **/** 6 -------------- (el valor obtenido será **0**)<br />
-    var **miOtraDivision** = 5 **/** 0 ---------- (el valor obtenido será **Infinity**)<br /><br />
-
--   **módulo:** el operador es **%**<br />
-    _ejemplos:_<br />
-    var **modulo** = 2 **%** 4 ---------------- (el valor obtenido será **0**, ya que el resto de 2/4 es 0)<br />
-    var **otroModulo** = 7 **%** 3 ------------ (el valor obtenido será **1**, ya que el resto de 7/3 es 1)<br />
-    var **miModulo** = 0 **%** 6 -------------- (el valor obtenido será **0**)<br />
-    var **miOtroModulo** = 5 **%** 0 ---------- (el valor obtenido será **NaN**)<br /><br />
-
--   **incremento:** el operador es **++**. Incrementa en una unidad el valor de la variable.<br />
-    _ejemplos:_<br />
-    var **miVariable** = 3
-    **miVariable++** ------------ (el valor de **miVariable** ahora será **4**)<br />
-
--   **decremento:** el operador es **--**. Decrementa en una unidad el valor de la variable.<br />
-    _ejemplos:_<br />
-    var **miVariable** = 3
-    **miVariable--** ------------ (el valor de **miVariable** ahora será **2**)<br />
-
-### De asignación
-
-Se utilizan para asignar un valor o expresión a una variable. La variable se coloca a la izquierda del operador y el valor o la expresión se coloca a la derecha.
-Pueden ser:
-
--   **asignación**: el operador es =. Si escribo x = y, asigna a x el contenido de y.<br />
-    _ejemplos_:<br />
-    var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
-    var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
-    **valorUno = valorDos** ---------------------- (**valorUno** ahora pasará a valer **3**)<br /><br />
-
--   **asignación con suma**: el operador es +=. Si escribo x += y, asigna a x el contenido de x + y.<br />
-    _ejemplos_:<br />
-    var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
-    var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
-    **valorUno = valorDos** ---------------------- (**valorUno** ahora pasará a valer **3**)<br /><br />
-
-```javascript
-var r = (4 % 2) + 3 - (2 + 6 / 2) > (6 % 3) + (5 % 2) == ((6 % 2) + 3 * 2 >= 1 + 2 && 5 * 2 - (7 % 3) + 1 < 4 - 2);
+```html
+<script type="text/javascript"></script>
 ```
 
-_Detectamos dos grandes agrupaciones, y una más pequeña. También vemos que no existen operadores de negación, incremento ni decremento. Comenzamos resolviendo la agrupación pequeña, primero la división y luego la suma._
+**Inserción de código JavaScript en la cabecera de un documento HTML:**<br />
+Al colocar código JavaScript entre etiquetas `<script></script>` dentro de las etiquetas `<head></head>`, el script se ejecutará secuencialmente al cargarse la cabecera y luego se cargará el resto del documento en el navegador.<br />
 
-```javascript
-r = (4 % 2) + 3 - 5 > (6 % 3) + (5 % 2) == ((6 % 2) + 3 * 2 >= 1 + 2 && 5 * 2 - (7 % 3) + 1 < 4 - 2);
+**archivo_1.html**
+
+```html
+<html>
+    <head>
+        <title>Archivo 1</title>
+        <script type="text/javascript">
+            // El código:
+            var unaVariable = 1;
+        </script>
+    </head>
+    <body>
+        <p>Esto es un párrafo</p>
+    </body>
+</html>
 ```
 
-[ ejercicios unidad 1 ](/ejercicios.md/)
+En archivo_1.html el código se ejecutará durante la carga de la cabecera. Cuando se ejecute, se declarará e inicializará la variable unaVariable. Una vez ejecutado, se mostrará el contenido del documento, en este caso el párrafo.<br /><br />
+
+**Inserción de código JavaScript en el cuerpo de un documento HTML:**<br />
+Al colocar código JavaScript entre etiquetas `<script></script>` dentro de las etiquetas `<body></body>`, el script se ejecutará secuencialmente a medida que cargue el contenido del documento en el navegador.<br />
+
+**archivo_2.html**
+
+```html
+<html>
+    <head>
+        <title>Archivo 2</title>
+    </head>
+    <body>
+        <p>Antes del script</p>
+        <script type="text/javascript">
+            // El código:
+            var miVariable = 1;
+        </script>
+        <p>Después del script</p>
+    </body>
+</html>
+```
+
+En archivo_2.html el código se ejecutará durante la carga del cuerpo, luego de mostrar el contenido del primer párrafo. Cuando se ejecute, se declarará e inicializará la variable miVariable. Una vez ejecutado, se mostrará el contenido del segundo párrafo.<br /><br />
+
+**Inserción de código JavaScript desde un archivo externo:**<br />
+En este caso se escribe todo el código en un archivo externo cuya extensión será .js, y luego se incluye dentro del documento HTML. Según donde se coloquen las etiquetas <script></script> que llamen al documento externo, el script se ejecutará secuencialmente al cargarse esa parte del documento en el navegador.
+Esta forma de manejar los archivos es la más utilizada, ya que permite separar el código JavaScript del documento HTML.<br />
+
+**codigo.js**
+
+```javascript
+// El código:
+var otraVariable = 1;
+```
+
+**archivo_3.html**
+
+```html
+<html>
+    <head>
+        <title>Archivo 3</title>
+        <script type="text/javascript" src="codigo.js"></script>
+    </head>
+    <body>
+        <p>Esto es un párrafo</p>
+    </body>
+</html>
+```
+
+En archivo_3.html el código del archivo codigo.js será incluido en el documento mediante el atributo src en la etiqueta de apertura `<script>`. En este caso funcionará igual que archivo_1.html, el código se ejecutará durante la carga de la cabecera. Cuando se ejecute, se declarará e inicializará la variable otraVariable. Una vez ejecutado, se mostrará el contenido del documento, en este caso el párrafo.<br /><br />
+
+**Etiqueta noscript:**<br />
+En caso de que un navegador en el que se muestra una página con código JavaScript no lo tenga habilitado, se puede informar la necesidad de habilitarlo mediante las etiquetas HTML `<noscript></noscript>`.<br />
+Las etiquetas `<noscript></noscript>` se debe incluir entre las etiquetas `<body></body>` en la zona donde desee mostrarse el mensaje de deseado.<br />
+Las etiquetas `<noscript></noscript>` pueden incluir cualquier etiqueta HTML.<br />
+
+**archivo_4.html**
+
+```html
+<html>
+    <head>
+        <title>Archivo 4</title>
+    </head>
+    <body>
+        <h1>Bienvenido</h1>
+        <script type="text/javascript">
+            // El código:
+            var laVariable = 1;
+        </script>
+        <noscript>
+            <p>Advertencia</p>
+            <p>Esta página requiere habilitar JavaScript</p>
+        </noscript>
+    </body>
+</html>
+```
+
+Si al abrir el archivo_4.html el navegador que lo interpreta no tiene JavaScript habilitado, se verá en pantalla el contenido del encabezado 1 y de los párrafos dentro de las etiquetas `<noscript></noscript>`, pero no se ejecutará el código.<br />
+Si al contrario, tiene habilitado JavaScript, el código se ejecutará durante la carga del cuerpo, luego de mostrar el contenido del encabezado 1. Cuando se ejecute, se declarará e inicializará la variable laVariable y no se mostrará el contenido de las etiquetas `<noscript></noscript>`.<br />
+
+##Ingreso y egreso de información
+
+###Método prompt:
+Este método o función del navegador cuando se ejecuta muestra una ventana emergente con botones “Aceptar” y “Cancelar”, un texto que se puede definir y un campo de entrada de texto con un valor predeterminado que también se puede definir.
+En caso de pulsar el botón “Aceptar”, se obtiene el valor ingresado en el campo de texto.
+En caso de pulsar el botón “Cancelar” o se cierra la ventana emergente, se obtiene el valor null.
+Este método se utilizará para solicitar datos al usuario durante la ejecución del script, estos datos deberán ser guardados en una variable para su posterior manipulación.
+
+```javascript
+var valor = prompt('Ingrese un valor', 'valor por defecto');
+```
+
+![alt text](images/promp.png 'prompt')
+
+En el ejemplo anterior se puede observar que la estructura de este método consta de la palabra prompt seguido de unos paréntesis que encierran dos valores separados con coma (,). El primer valor es el texto que aparece sobre el campo de entrada y el sgundo valor es el valor por defecto que aparece dentro de este campo.<br />
+También se puede observar que una vez que se pulsa alguno de los tres botones ("Aceptar", "Cancelar" o "Cerrar"), el valor obtenido se guardará, en este ejemplo, en la variable valor.
+Se debe tener en cuenta, que cualquier valor ingresado, excepto el null, se tomará como tipo de dato cadena, lo que significa que si se escribe un número en el campo de texto, el valor obtenido no será del tipo de dato numérico, por lo que no se podrán realizar operaciones numéricas.<br /><br />
+
+Para que el valor obtenido sea numérico es necesario convertirlo. JavaScript ofrece dos métodos: parseInt (convierte el valor a convertir en un tipo de dato numérico entero) y parseFloat (convierte el valor a convertir en un tipo de dato numérico de punto flotante).<br />
+
+**parseInt**
+
+```javascript
+    var numero = prompt("Ingrese un número", "0"); // Ingreso el valor 1.5, que en realidad se guarda como "1.5" numero = parseInt(numero); // Luego de la
+    conversión, numero valdrá 1 numérico entero
+```
+
+En el ejemplo anterior se puede observar que la estructura del método parseInt consta de la palabra parseInt (con la letra i en mayúscula) seguido de unos paréntesis que encierran el valor a convertir. Este nuevo valor se guardará, en este ejemplo, nuevamente en la variable numero, pero con el tipo de dato numérico entero.
+
+**parseFloat**
+
+```javascript
+    var numero = prompt("Ingrese un número", "0"); // Ingreso el valor 1.5, que en realidad se guarda como "1.5" numero = parseFloat(numero); // Luego de la
+    conversión, numero valdrá 1.5 numérico flotante
+```
+
+En el ejemplo anterior se puede observar que la estructura del método parseFloat consta de la palabra parseFloat (con la letra f en mayúscula) seguido de unos paréntesis que encierran el valor a convertir. Este nuevo valor se guardará, en este ejemplo, nuevamente en la variable numero, pero con el tipo de dato numérico flotante.<br />
+Finalmente, es posible realizar la conversión en la misma línea que se ingresa el valor.
+
+**parseInt**
+
+```javascript
+var numero = parseInt(prompt('Ingrese un número', '0'));
+/* En la línea anterior se obtendrá el valor mediante el prompt lugo se lo convertirá en número entero
+y finalmente se guardará en la variable número */
+```
+
+**parseFloat**
+
+```javascript
+var numero = parseFloat(prompt("Ingrese un número", "0"));
+/* En la línea anterior se obtendrá el valor mediante el prompt lugo se lo convertirá en número punto flotante */
+y finalmente se guardará en la variable número
+```
+
+**Método confirm:**
+Este método o función del navegador cuando se ejecuta muestra una ventana emergente con botones “Aceptar” y “Cancelar” y un texto que se puede definir.<br />
+En caso de pulsar el botón “Aceptar”, se obtiene el valor lógico true.<br />
+En caso de pulsar el botón “Cancelar” o se cierra la ventana emergente, se obtiene el valor lógico false.<br />
+Este método se utilizará para solicitar al usuario una respuesta lógica durante la ejecución del script, esta respuesta deberá ser guardada en una variable para su posterior manipulación.
+
+```javascript
+var valor = confirm('Desea aceptar o cancelar?');
+```
+
+![alt text](images/confirm.png 'confirm')
+
+En el ejemplo anterior se puede observar que la estructura de este método consta de la palabra confirm seguido de unos paréntesis que encierran un valor. Este valor es el texto que aparece sobre los botones.
+También se puede observar que una vez que se pulsa alguno de los tres botones ("Aceptar", "Cancelar" o "Cerrar"), el valor lógico obtenido se guardará, en este ejemplo, en la variable valor.<br />
+
+**Método alert**
+Este método o función del navegador cuando se ejecuta muestra una ventana emergente con un botón “Aceptar” y un texto que se puede definir.<br />
+Al pulsar el botón “Aceptar”, se cierra la ventana, no se obtiene ningún valor.<br />
+Este método se utilizará mostrar en pantalla un valor durante la ejecución del script.
+
+```javascript
+alert('Esto es un mensaje a través de alert');
+```
+
+![alt text](images/alert.png 'alert')
+
+En el ejemplo anterior se puede observar que la estructura de este método consta de la palabra alert seguido de unos paréntesis que encierran un valor. Este valor es el texto que aparece sobre el botón.
+Se debe tener en cuenta que la ejecución del script se pausa hasta que se pulse el botón "Aceptar", luego se continuará ejecutando el script. Se puede mostrar cualquier tipo de valor.
+
+**Método document.write**
+Este método o función del documento cuando se ejecuta genera código HTML que se agrega al documento. Este método se utilizará para agregar al documento un valor durante la ejecución del script.
+
+```html
+<body>
+    <script type="text/javascript">
+        document.write('<h1>Encabezado generado por JavaScript</h1>');
+    </script>
+    <p>Párrafo</p>
+</body>
+```
+
+![alt text](images/encabezado.png 'encabezado')
+
+En el ejemplo anterior se puede observar que la estructura de este método consta de las palabra document.write seguido de unos paréntesis que encierran un valor. Este valor se agregará al documento en el lugar secuencial donde se ejecute el código.<br />
+En el ejemplo, el encabezado es generado desde JavaScript, se agrega al documento antes del párrafo.<br />
+Se debe tener en cuenta que las etiquetas HTML a utilizar dentro de este método son consideradas cadenas,por lo que deben ir entre comillas. Se puede mostrar cualquier tipo de valor. No es obligatorio el uso de etiquetas HTML.
+
+### Caracteres especiales
+
+**Escape de caracteres**
+Existe un conjunto de caracteres especiales que al ser interpretados por el navedagor, afectan a la cadena de texto a mostrar.<br />
+Se los reconoce porque comienzan con el caracter de barra invertida (\).<br />
+Algunos de ellos son:<br />
+
+-   \n: salto de línea
+-   \t: tabulación
+-   \b: retroceso de línea
+-   \f: avance de línea
+-   \r: return
+-   \': comilla simple (').
+-   \": comilla doble (").
+-   \\: barra invertida (').
+
+```javascript
+alert('Esto es un "mensaje" a través de\nalert');
+```
+
+![alt text](images/alert_escapado.png 'alert escapado')
+En el ejemplo anterior se puede observar:
+
+-   El uso de comillas dobles dentro de la cadena a través de \".
+-   Un salto de línea dentro de la cadena a través de \n.

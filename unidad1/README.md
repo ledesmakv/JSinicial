@@ -215,8 +215,8 @@ Una propiedad es un valor o un conjunto de valores (en forma de matriz u objeto)
 Se utilizan para realizar operaciones aritméticas. Devuelve un número.<br />
 Pueden ser:<br />
 
--   **suma:** el operador es **+**
-    _ejemplos:_
+-   **suma:** el operador es **+**<br />
+    _ejemplos:_<br />
     var **suma** = 2 **+** 4 ------------------- (el valor obtenido será **6**)<br />
     var **otraSuma** = 7 **+** 3 --------------- (el valor obtenido será **10**)<br />
     var **miSuma** = 0 **+** 6 ----------------- (el valor obtenido será **6**)<br />
@@ -252,18 +252,18 @@ Pueden ser:<br />
 
 -   **incremento:** el operador es **++**. Incrementa en una unidad el valor de la variable.<br />
     _ejemplos:_<br />
-    var **miVariable** = 3
+    var **miVariable** = 3<br />
     **miVariable++** ------------ (el valor de **miVariable** ahora será **4**)<br />
 
 -   **decremento:** el operador es **--**. Decrementa en una unidad el valor de la variable.<br />
     _ejemplos:_<br />
-    var **miVariable** = 3
+    var **miVariable** = 3<br />
     **miVariable--** ------------ (el valor de **miVariable** ahora será **2**)<br />
 
 ### De asignación
 
 Se utilizan para asignar un valor o expresión a una variable. La variable se coloca a la izquierda del operador y el valor o la expresión se coloca a la derecha.
-Pueden ser:
+Pueden ser:<br />
 
 -   **asignación**: el operador es =. Si escribo x = y, asigna a x el contenido de y.<br />
     _ejemplos_:<br />
@@ -275,4 +275,245 @@ Pueden ser:
     _ejemplos_:<br />
     var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
     var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
-    **valorUno = valorDos** ---------------------- (**valorUno** ahora pasará a valer **3**)<br /><br />
+    **valorUno += valorDos** ---------------------- (**valorUno** ahora pasará a valer **9**)<br /><br />
+
+-   **asignación con resta**: el operador es -=. Si escribo x -= y, asigna a x el contenido de x - y.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
+    var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
+    **valorUno -= valorDos** ---------------------- (**valorUno** ahora pasará a valer **3**)<br /><br />
+
+-   **asignación con multiplicación**: el operador es _=. Si escribo x _= y, asigna a x el contenido de x _ y.<br />
+    *ejemplos*:<br />
+    var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
+    var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
+    \*\*valorUno _= valorDos** ---------------------- (**valorUno** ahora pasará a valer **18\*\*)<br /><br />
+
+-   **asignación con división**: el operador es /=. Si escribo x /= y, asigna a x el contenido de x / y.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
+    var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
+    **valorUno /= valorDos** ---------------------- (**valorUno** ahora pasará a valer **2**)<br /><br />
+
+-   **asignación con módulo**: el operador es %=. Si escribo x %= y, asigna a x el contenido de x % y.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 6 ------------------------- (**valorUno** pasa a valer **6**)<br />
+    var **valorDos** = 3 ------------------------- (**valorDos** pasa a valer **3**)<br />
+    **valorUno %= valorDos** ---------------------- (**valorUno** ahora pasará a valer **0**)<br /><br />
+
+### De cadena
+
+Se utilizan para unir valores del tipo cadena. Existe un solo operador de cadena:<br />
+
+-   **Concatenación:** el operador es +.<br />
+    Ejemplos:<br />
+    var **cadena1** = "Hola"<br />
+    var **cadena2** = "Mundo"<br />
+    var **otraCadena = cadena1 + cadena2** ----------------- (**otraCadena** ahora vale **"HolaMundo"**)<br />
+    **otraCadena = cadena2 + " " + cadena1** --------------- (**otraCadena** ahora pasará a valer **"Mundo Hola"**)<br /><br />
+    Debe tenerse en cuenta que se utiliza el mismo operador para concatenar como para realizar sumas aritméticas,
+    por lo que según el contexto el operador funcionará de diferentes maneras:<br />
+
+····- Si se utiliza solamente entre números, funcionará como operador de suma aritmética.<br />
+·······Ejemplos: <br />
+·······var **respuesta = 1 + 3 + 5 + 6 + 8** ---------------------- (**respuesta** valdrá **23**)<br />
+
+····- Si se utiliza solamente entre cadenas, funcionará como operador de concatenación.<br />
+·······Ejemplos: <br />
+·······var **respuesta = "1" + "3" + "5" + "6" + "8"** ---------------------- (**respuesta** valdrá **"13568"**)<br />
+
+····- Si se utiliza entre números y cadenas, funcionará como operador de suma y de concatenación.<br />
+·······Ejemplos: <br />
+·······var **respuesta = 1 + 3 + "5" + 6 + 8** ---------------------- (**respuesta** valdrá **"4568"**)<br />
+·······var **otraRespuesta = 1 + "3" + 5 + "6" + 8** ---------------------- (**respuesta** valdrá **"13568"**)<br />
+·······**otraRespuesta = "1" + 3 + 5 + 6 + 8** ---------------------- (**respuesta** valdrá **"13568"**)<br />
+·······**otraRespuesta = 1 + 3 + 5 + 6 + "8"** ---------------------- (**respuesta** valdrá **"158"**)<br />
+
+### Lógicos
+
+Se utilizan para realizar relaciones lógicas entre expresiones. Devuelven un valor lógico true o false en base a las expresiones con las que se realicen las operaciones.<br />
+Pueden ser:<br />
+
+-   **Operador Y (AND):** el operador es &&. Devolverá true si todas las expresiones son verdaderas. Si alguna de las expresiones se evalúa como falsa, el resultado será false.<br />
+    Tabla de la verdad de AND:<br />
+
+| **Expresión 1** | **Operador** | **Expresión 2** | **Resultado** |
+| --------------- | ------------ | --------------- | ------------- |
+| true            | &&           | true            | true          |
+| true            | &&           | false           | false         |
+| false           | &&           | true            | false         |
+| false           | &&           | false           | false         |
+
+-   **Operador O (OR):** el operador es ||. Devolverá false si todas las expresiones son falsas. Si alguna de las expresiones se evalúa como verdadera, el resultado será true.<br />
+    Tabla de la verdad de OR:<br />
+
+| **Expresión 1** | **Operador** | **Expresión 2** | **Resultado** |
+| --------------- | ------------ | --------------- | ------------- |
+| true            | \|\|         | true            | true          |
+| true            | \|\|         | false           | true          |
+| false           | \|\|         | true            | true          |
+| false           | \|\|         | false           | false         |
+
+-   **Operador Negación (NOT):** el operador es ! y se coloca delante de la expresión a operar. Devolverá el valor lógico opuesto a la expresión a la que se aplica.<br />
+    Tabla de la verdad de NOT:<br />
+
+| **Expresión 1** | **Operación de la expresión** | **Resultado** |
+| --------------- | ----------------------------- | ------------- |
+| true            | !true                         | false         |
+| false           | !false                        | true          |
+
+### De comparación
+
+Se utilizan para realizar comparaciones lógicas entre expresiones. Devuelven un valor lógico true o false en base a las expresiones con las que se realicen las operaciones.<br />
+Pueden ser:<br />
+
+-   **Igualdad**: el operador es ==. Si ambas expresiones tienen el mismo valor, el resultado será true, de lo contrario false.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 2<br />
+    var **valorDos** = 2<br />
+    var **valorTres** = 4<br />
+    var **valorCuatro** = "2"<br />
+    var **resultado**
+    **resultado = valorUno == valorDos** ------------------------- (**resultado** será **true**)<br />
+    **resultado = valorUno == valorTres** ------------------------- (**resultado** será **false**)<br />
+    **resultado = valorUno == valorCuatro** ---------------------- (**resultado** será **true**)<br /><br />
+
+-   **Igualdad estricta**: el operador es ===. Si ambas expresiones tienen el mismo valor y tipo de dato, el resultado será true, de lo contrario false.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 2<br />
+    var **valorDos** = 2<br />
+    var **valorTres** = 4<br />
+    var **valorCuatro** = "2"<br />
+    var **resultado**
+    **resultado = valorUno === valorDos** ------------------------- (**resultado** será **true**)<br />
+    **resultado = valorUno === valorTres** ------------------------- (**resultado** será **false**)<br />
+    **resultado = valorUno === valorCuatro** ---------------------- (**resultado** será **false**)<br /><br />
+
+-   **Desigualdad**: el operador es !=. Si ambas expresiones tienen distinto valor, el resultado será true, de lo contrario false.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 2<br />
+    var **valorDos** = 2<br />
+    var **valorTres** = 4<br />
+    var **valorCuatro** = "2"<br />
+    var **resultado**
+    **resultado = valorUno != valorDos** ------------------------- (**resultado** será **false**)<br />
+    **resultado = valorUno != valorTres** ------------------------- (**resultado** será **true**)<br />
+    **resultado = valorUno != valorCuatro** ---------------------- (**resultado** será **false**)<br /><br />
+
+-   **Desigualdad estricta**: el operador es !==. Si ambas expresiones tienen distinto valor y tipo de dato, el
+    resultado será true, de lo contrario false.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 2<br />
+    var **valorDos** = 2<br />
+    var **valorTres** = 4<br />
+    var **valorCuatro** = "2"<br />
+    var **resultado**
+    **resultado = valorUno !== valorDos** ------------------------- (**resultado** será **false**)<br />
+    **resultado = valorUno !== valorTres** ------------------------- (**resultado** será **true**)<br />
+    **resultado = valorUno !== valorCuatro** ---------------------- (**resultado** será **true**)<br /><br />
+
+-   **Mayor**: el operador es >. Si la expresión de la izquierda es mayor que la de la derecha, el resultado será
+    true, de lo contrario false.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 2<br />
+    var **valorDos** = 2<br />
+    var **valorTres** = 4<br />
+    var **valorCuatro** = 1<br />
+    var **resultado**
+    **resultado = valorUno > valorDos** ------------------------- (**resultado** será **false**)<br />
+    **resultado = valorUno > valorTres** ------------------------- (**resultado** será **false**)<br />
+    **resultado = valorUno > valorCuatro** ---------------------- (**resultado** será **true**)<br /><br />
+
+-   **Mayor o igual**: el operador es >=. Si la expresión de la izquierda es mayor o igual que la de la derecha, el
+    resultado será true, de lo contrario false.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 2<br />
+    var **valorDos** = 2<br />
+    var **valorTres** = 4<br />
+    var **valorCuatro** = 1<br />
+    var **resultado**
+    **resultado = valorUno >= valorDos** ------------------------- (**resultado** será **true**)<br />
+    **resultado = valorUno >= valorTres** ------------------------- (**resultado** será **false**)<br />
+    **resultado = valorUno >= valorCuatro** ---------------------- (**resultado** será **true**)<br /><br />
+
+-   **Menor**: el operador es <. Si la expresión de la izquierda es menor que la de la derecha, el resultado será
+    true, de lo contrario false.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 2<br />
+    var **valorDos** = 2<br />
+    var **valorTres** = 4<br />
+    var **valorCuatro** = 1<br />
+    var **resultado**
+    **resultado = valorUno \< valorDos** ------------------------- (**resultado** será **false**)<br />
+    **resultado = valorUno \< valorTres** ------------------------- (**resultado** será **true**)<br />
+    **resultado = valorUno \< valorCuatro** ---------------------- (**resultado** será **false**)<br /><br />
+
+-   **Menor o igual**: el operador es <=. Si la expresión de la izquierda es menor o igual que la de la derecha, el resultado será true, de lo contrario false.<br />
+    _ejemplos_:<br />
+    var **valorUno** = 2<br />
+    var **valorDos** = 2<br />
+    var **valorTres** = 4<br />
+    var **valorCuatro** = 1<br />
+    var **resultado**
+    **resultado = valorUno \<= valorDos** ------------------------- (**resultado** será **true**)<br />
+    **resultado = valorUno \<= valorTres** ------------------------- (**resultado** será **true**)<br />
+    **resultado = valorUno \<= valorCuatro** ---------------------- (**resultado** será **false**)<br /><br />
+
+### Precedencia de operadores:
+
+El intérprete tiene prioridades para ir evaluando operadores a la hora de ejecutarse una expresión. El orden es el siguiente:<br /><br />
+
+1. Agrupaciones: ( ) ---- (para agrupaciones dentro de agrupaciones siempre se utilizarán paréntesis)
+2. Negación, Incremento, Decremento: ! ++ --
+3. Multiplicación, División, Módulos: \* / %
+4. Suma, Resta: + -
+5. Relaciones lógicas: > >= < <=
+6. Igualdad, Desigualdad: == === != !==
+7. Operador AND: &&
+8. Operador OR: ||
+9. Condicional: ?:
+10. Asignación: =
+    <br /><br />
+    _Ejemplo:_<br />
+
+```javascript
+var r = (4 % 2) + 3 - (2 + 6 / 2) > (6 % 3) + (5 % 2) == ((6 % 2) + 3 * 2 >= 1 + 2 && 5 * 2 - (7 % 3) + 1 < 4 - 2);
+```
+
+_Detectamos dos grandes agrupaciones, y una más pequeña. También vemos que no existen operadores de negación, incremento ni decremento. Comenzamos resolviendo la agrupación pequeña, primero la división y luego la suma._
+
+```javascript
+r = (4 % 2) + 3 - 5 > (6 % 3) + (5 % 2) == ((6 % 2) + 3 * 2 >= 1 + 2 && 5 * 2 - (7 % 3) + 1 < 4 - 2);
+```
+
+_Luego, resolvemos las multiplicaciones, divisiones y módulos._
+
+```javascript
+r = 0 + 3 - 5 > 0 + 1 == (0 + 6 >= 1 + 2 && 10 - 1 + 1 < 4 - 2);
+```
+
+_Ahora procedemos a resolver la sumas y restas._
+
+```javascript
+r = -2 > 1 == (6 >= 3 && 10 < 2);
+```
+
+_Ahora procedemos a resolver las relaciones lógicas._
+
+```javascript
+r = false == (true && false);
+```
+
+_Primero debemos resolver la operación lógica AND dentro de las agrupaciones._
+
+```javascript
+r = false == false;
+```
+
+_Finalmente comparo la igualdad de ambas agrupaciones y asigno el valor a r._
+
+```javascript
+r = true;
+```
+
+_El resultado de toda la operación realizada será true._
